@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tiago's Master Thesis Proposals: Grappa</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/sampa.css" rel="stylesheet">
+        <link rel="alternate" type="application/atom+xml" title="Atom"
+            href="/blog/blog.xml">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>      
+        <div class="container">
+          <div id="pageHeader" class="homeColor">
+            <a href="/">
+                <img id ="photo" src="/img/tjvg.jpg"
+                    alt="Tiago Guerreiro" class="homeColor">
+            </a>
+
+            <div id="title">Tiago Guerreiro
+            </div>
+
+            <div id="nav">
+                  
+                  
+            </div>
+
+            
+          </div>  
+          
+          <div id="social_bar">
+    <a href="https://twitter.com/tjvguerreiro"><i style="color: #00aced;" class="fa fa-twitter-square fa-2x"></i></a>
+    <a href="https://www.linkedin.com/profile/view?id=1602325"><i style="color: #007bb6;" class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+          
+
+  <h2>Grappa</h2>
+
+          
+<div class="content">
+<p>Mass-market computer systems are designed to exploit spatial locality
+via cache and local memory to achieve high efficiency. Unfortunately,
+when processing graphs spatial locality is often difficult, if not
+impossible, to express.</p>
+
+<p>As system size grows, edges in a graph distributed across its nodes’
+memories become increasingly likely to join vertices that are far apart.
+The rate of traversal slows. Consequently, even though parallelism and
+hardware resources increase, performance degrades.</p>
+
+<p>Grappa is a latency-tolerant runtime for mass-market clusters that
+mitigates this degradation, allowing graph processing to scale up even
+in the presence of diminishing locality and increasing latency. Grappa
+works by:</p>
+
+<ul>
+  <li>exploiting fine-grained task parallelism to tolerate the increasing
+latency, and</li>
+  <li>aggregating remote references from disparate tasks to make better
+use of diminishing bandwidth at scale.</li>
+</ul>
+
+<p>The application developer need only express parallelism, not decide when
+and how to exploit it.</p>
+
+<p><a href="http://grappa.io">More info on Grappa</a></p>
+
+<h3 id="current-contributors">Current Contributors</h3>
+
+<p><a href="http://homes.cs.washington.edu/~nelson/">Jacob Nelson</a></p>
+
+<p><a href="http://homes.cs.washington.edu/~bdmyers/">Brandon Myers</a></p>
+
+<p><a href="http://homes.cs.washington.edu/~bholt/">Brandon Holt</a></p>
+
+<p><a href="http://www.cs.washington.edu/homes/luisceze/">Luis Ceze</a></p>
+
+<p><a href="http://homes.cs.washington.edu/~oskin/">Mark Oskin</a></p>
+
+<p>Preston Briggs</p>
+
+<p>Simon Kahan (PNNL)</p>
+
+<h3 id="publications">Publications</h3>
+
+<p><a href="http://sampa.cs.washington.edu/papers/grappa-tr-2014-02.pdf">Grappa: A Latency-Tolerant Runtime for Large-Scale Irregular Applications</a>.
+Jacob Nelson, Brandon Holt, Brandon Myers, Preston Briggs, Luis Ceze, Simon Kahan, and Mark Oskin. Tech report, February 2014</p>
+
+<p><a href="http://sampa.cs.washington.edu/papers/holt-pgas13.pdf">Flat Combining Synchronized Global Data Structures</a>.
+Brandon Holt, Jacob Nelson, Brandon Myers, Preston Briggs, Luis Ceze, Simon Kahan, and Mark Oskin. International Conference on PGAS Programming Models (PGAS), October 2013</p>
+
+<p><a href="http://sampa.cs.washington.edu/papers/myers-imdm13.pdf">Compiled Plans for In-Memory Path-Counting Queries</a>.
+Brandon Myers, Jeremy Hyrkas, Daniel Halperin, and Bill Howe. International Workshop on In-Memory Data Management and Analytics (IMDM w/ VLDB), August 2013</p>
+
+<p><a href="https://www.usenix.org/system/files/conference/hotpar12/hotpar12-final46.pdf">Do We Need a Crystal Ball for Task Migration?</a>
+Brandon Myers and Brandon Holt. USENIX Workshop on Hot Topics in Parallelism (HOTPAR), June 2012</p>
+
+<p><a href="http://www.usenix.org/event/hotpar11/tech/final_files/Nelson.pdf">Crunching Large Graphs with Commodity
+Processors</a>.
+Jacob Nelson, Brandon Myers, A. H. Hunter, Preston Briggs, Luis Ceze, Carl Ebeling, Dan Grossman, Simon Kahan, and Mark Oskin. USENIX Workshop on Hot Topics in Parallelism (HOTPAR), June 2011</p>
+
+</div>
+
+
+          <div class="footer">
+
+          </div>
+
+        </div> <!-- /container -->
+
+        <!-- Support retina images. -->
+        <script type="text/javascript"
+            src="/js/srcset-polyfill.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>

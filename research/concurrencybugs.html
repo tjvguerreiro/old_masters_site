@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tiago's Master Thesis Proposals: Concurrency Bug Detection and Avoidance</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/sampa.css" rel="stylesheet">
+        <link rel="alternate" type="application/atom+xml" title="Atom"
+            href="/blog/blog.xml">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>      
+        <div class="container">
+          <div id="pageHeader" class="homeColor">
+            <a href="/">
+                <img id ="photo" src="/img/tjvg.jpg"
+                    alt="Tiago Guerreiro" class="homeColor">
+            </a>
+
+            <div id="title">Tiago Guerreiro
+            </div>
+
+            <div id="nav">
+                  
+                  
+            </div>
+
+            
+          </div>  
+          
+          <div id="social_bar">
+    <a href="https://twitter.com/tjvguerreiro"><i style="color: #00aced;" class="fa fa-twitter-square fa-2x"></i></a>
+    <a href="https://www.linkedin.com/profile/view?id=1602325"><i style="color: #007bb6;" class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+          
+
+  <h2>Concurrency Bug Detection and Avoidance</h2>
+
+          
+<div class="content">
+<p>With software complexity growing at a very fast pace comes software
+reliability issues. Today software failures pose a significant cost to
+our economy — NIST estimates around $60B per year. Pervasive
+parallelism is likely to further increase the chances of software
+failures. While one could argue that the best way to address these
+challenges is to improve software engineering, it is likely that the
+problem will haunt us for a while due to legacy systems and the time
+required to fundamentally change the way software is developed. For that
+reason, we believe that a way of alleviating the problem is to design
+architectures and systems that significantly decrease the probability
+that software bugs manifest themselves and lead to a failure.</p>
+
+<p>We are developing systems that can detect and survive a broad class of
+concurrency bugs. Concurrency bugs manifest nondeterministically, i.e.,
+they depend upon the occurrence of certain bad interleavings.
+Interestingly, a given memory semantics exposed to the software can
+yield multiple valid global interleavings of memory operations. One can
+allow only a subset of these interleavings to avoid concurrency bugs
+while still exposing the same memory semantics to the software. We
+leverage this property and avoid concurrency bugs by monitoring when one
+is likely to happen and choosing a <em>less dangerous</em> interleaving. Since
+we don’t want bugs to go simply unnoticed, we are also developing
+mechanism to reports bugs back to the programmer.</p>
+
+<p>Our first step towards that goal was
+<a href="http://www.cs.washington.edu/homes/luisceze/publications/lucia-atomaid.pdf">Atom-Aid</a>,
+which is a multiprocessor architecture that can both detect and avoid
+atomicity violations. We are now expanding the class of bugs we can
+detect and avoid and are developing new machine learning-based
+techniques.</p>
+
+<p>More information on our concurrency error detection research can be
+found <a href="http://brandonlucia.com/detect.html">here</a>.</p>
+
+<p>More information on our research on avoiding failures in concurrent
+programs can be found
+<a href="http://brandonlucia.com/avoid.html">here</a>.</p>
+
+<p><strong>Current contacts:</strong>
+<a href="http://brandonlucia.com">Brandon Lucia</a>
+and <a href="http://www.cs.washington.edu/homes/luisceze">Luis Ceze</a>.</p>
+
+<h3 id="software-tools">Software Tools</h3>
+
+<p>We recently released a source version of a tool we developed called
+Recon. Recon is useful for finding concurrent programming mistakes, and
+using reconstructed execution fragments to explain their causes to
+programmers.</p>
+
+<h3 id="publications">Publications</h3>
+
+<p><a href="/papers/aviso_ASPLOS2013.pdf">Cooperative Empirical Failure Avoidance for Multithreaded
+Programs</a>,
+(<strong>ASPLOS 2013</strong>), Brandon Lucia and Luis Ceze</p>
+
+<p><a href="/papers/oopsla12-ifrit.pdf">IFRit: Interference-Free Regions for Dynamic Data-Race
+Detection</a>,
+(<strong>OOPSLA 2012</strong>), Laura Effinger-Dean, Brandon Lucia, Luis Ceze, Dan
+Grossman, Hans-J. Boehm</p>
+
+<p><a href="/papers/recon-pldi2011.pdf">Isolating and Understanding Concurrency Errors with Reconsructed
+Execution
+Fragments</a>,
+(<strong>PLDI 2011</strong>), Brandon Lucia, Benjamin P. Wood, and Luis Ceze.</p>
+
+<p><a href="/papers/isca175-lucia.pdf">ColorSafe: Architectural Support for Debugging and Dynamically Avoiding
+Multi-variable Atomicity
+Violations</a>
+(<strong>ISCA 2010</strong>), Brandon Lucia, Luis Ceze and Karin Strauss.</p>
+
+<p><a href="http://www.cs.washington.edu/homes/luisceze/publications/micro09-lucia.pdf">Finding Concurrency Bugs with Context-Aware Communication
+Graphs</a>,
+(<strong>MICRO 2009</strong>), Brandon Lucia, Luis Ceze.</p>
+
+<p><a href="http://www.cs.washington.edu/homes/luisceze/publications/lucia-atomaid.pdf">Atom-Aid: Detecting and Surviving Atomicity
+Violations</a>
+(<strong>ISCA 2008</strong>), Brandon Lucia, Joseph Devietti, Karin Strauss and Luis
+Ceze. Selected to appear in <strong>IEEE Micro Top Picks 2009</strong>.</p>
+
+</div>
+
+
+          <div class="footer">
+
+          </div>
+
+        </div> <!-- /container -->
+
+        <!-- Support retina images. -->
+        <script type="text/javascript"
+            src="/js/srcset-polyfill.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tiago's Master Thesis Proposals: Operating System Implications of Non-Volatile Main Memory Systems</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/sampa.css" rel="stylesheet">
+        <link rel="alternate" type="application/atom+xml" title="Atom"
+            href="/blog/blog.xml">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>      
+        <div class="container">
+          <div id="pageHeader" class="homeColor">
+            <a href="/">
+                <img id ="photo" src="/img/tjvg.jpg"
+                    alt="Tiago Guerreiro" class="homeColor">
+            </a>
+
+            <div id="title">Tiago Guerreiro
+            </div>
+
+            <div id="nav">
+                  
+                  
+            </div>
+
+            
+          </div>  
+          
+          <div id="social_bar">
+    <a href="https://twitter.com/tjvguerreiro"><i style="color: #00aced;" class="fa fa-twitter-square fa-2x"></i></a>
+    <a href="https://www.linkedin.com/profile/view?id=1602325"><i style="color: #007bb6;" class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+          
+
+  <h2>Operating System Implications of Non-Volatile Main Memory Systems</h2>
+
+          
+<div class="content">
+<p>The existence of two basic levels of storage (fast/volatile and
+slow/non-volatile) has been a long-standing premise of most computer
+systems, influencing the design of OS components, including file
+systems, virtual memory, scheduling, execution models, and even their
+APIs. Emerging resistive memory technologies – such as phase-change
+memory (PCM) and memristors – have the potential to provide large, fast,
+non-volatile memory systems, changing the assumptions that motivated the
+design of current operating systems.</p>
+
+<p>The architecture research community is actively exploring the
+implications of fast, cheap non-volatile memory, including error
+correction mechanisms and memory hierarchy organization. Software
+research has focused primarily on NVRAM-based file systems that maintain
+current file system semantics and on programming interfaces for
+persistent objects. These efforts are evolutionary: they integrate NVRAM
+into existing architectures and programming structures.</p>
+
+<p>Instead, we believe that NVRAM could be revolutionary rather than
+evolutionary; this project seeks to explore the ways that cheap
+byte-addressable NVRAM could substantially affect OS design. We seek to
+answer the question: What if future systems contained only one level of
+memory that was persistent and uniform? What if there were no disk
+pages, no memory pages, no buffer cache, no page faults, no swapping, no
+booting on restart? We are currently designing a single-level storage
+system and key-value store focusing on the problems of (1) organization
+and structure (2) sharing and protection and (3) new features or
+simplifications exposed by this technology.</p>
+
+<p><strong>Current Contacts:</strong>
+<a href="http://www.cs.washington.edu/homes/katelin">Katelin Bailey</a>, <a href="http://www.cs.washington.edu/homes/pjh">Peter
+Hornyack</a>, <a href="http://www.cs.washington.edu/homes/luisceze">Luis
+Ceze</a>, <a href="http://www.cs.washington.edu/homes/gribble">Steve
+Gribble</a>, and <a href="http://www.cs.washington.edu/homes/levy">Hank
+Levy</a>.</p>
+
+<h3 id="publications">Publications</h3>
+
+<p><a href="http://www.cs.washington.edu/homes/katelin/papers/pcm-hotos11.pdf">Operating System Implications of Fast, Cheap, Non-Volatile
+Memory</a>
+(<strong>HotOS 2011</strong>), Katelin Bailey, Luis Ceze, Steven D. Gribble, Henry M.
+Levy.</p>
+
+</div>
+
+
+          <div class="footer">
+
+          </div>
+
+        </div> <!-- /container -->
+
+        <!-- Support retina images. -->
+        <script type="text/javascript"
+            src="/js/srcset-polyfill.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>

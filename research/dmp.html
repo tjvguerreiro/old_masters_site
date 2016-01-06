@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tiago's Master Thesis Proposals: Deterministic MultiProcessing (DMP)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/sampa.css" rel="stylesheet">
+        <link rel="alternate" type="application/atom+xml" title="Atom"
+            href="/blog/blog.xml">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>      
+        <div class="container">
+          <div id="pageHeader" class="homeColor">
+            <a href="/">
+                <img id ="photo" src="/img/tjvg.jpg"
+                    alt="Tiago Guerreiro" class="homeColor">
+            </a>
+
+            <div id="title">Tiago Guerreiro
+            </div>
+
+            <div id="nav">
+                  
+                  
+            </div>
+
+            
+          </div>  
+          
+          <div id="social_bar">
+    <a href="https://twitter.com/tjvguerreiro"><i style="color: #00aced;" class="fa fa-twitter-square fa-2x"></i></a>
+    <a href="https://www.linkedin.com/profile/view?id=1602325"><i style="color: #007bb6;" class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+          
+
+  <h2>Deterministic MultiProcessing (DMP)</h2>
+
+          
+<div class="content">
+<p>One of the main reasons it is difficult to write multithreaded code is
+that current shared-memory multicore systems can execute code
+nondeterministically. Each time a multithreaded application runs, it can
+produce a different output even if supplied with the same input. This
+frustrates debugging efforts and limits the ability to properly test
+multithreaded code, becoming a major obstacle to widespread adoption of
+parallel programming.</p>
+
+<p>Past efforts to address the problem of nondeterminism have primarily
+focused on deterministic replay and deterministic parallel programming
+models. The former is useful only for debugging, while the latter is
+typically domain-specific. In contrast, this project envisions that
+shared memory multiprocessor systems should always behave
+deterministically when executing <em>any</em> shared-memory parallel program.
+The core idea is to make inter-thread communication appear to be fully
+deterministic by guaranteeing equivalence to a deterministic serialized
+execution. This can be made efficient by employing speculation and
+exploiting properties of memory sharing behavior of applications.</p>
+
+<p>This project includes: (1) developing an architecture for efficient
+deterministic multiprocessing, from mechanisms to the hardware/software
+interface, (2) addressing system issues, e.g., executing an operating
+system in deterministic multiprocessors, and (3) leveraging the
+deterministic multiprocessing hardware/software interface to create
+tools for debugging, testing and bug avoidance.</p>
+
+<p><strong>Current contacts:</strong>
+ <a href="http://www.cs.washington.edu/homes/luisceze">Luis Ceze</a>, <a href="http://www.cs.washington.edu/homes/djg">Dan
+Grossman</a>, and <a href="http://www.cs.washington.edu/homes/tbergan/">Tom
+Bergan</a>.</p>
+
+<h3 id="publications">Publications</h3>
+
+<p><a href="http://www.cs.washington.edu/homes/tbergan/papers/wodet13-inputcovsched.pdf">Input-Covering Schedules for Multithreaded
+Programs</a>
+(<strong>WoDet 2013</strong>), Tom Bergan, Luis Ceze, and Dan Grossman.</p>
+
+<p><a href="http://www.cs.washington.edu/homes/tbergan/papers/asplos13-ddos.pdf">DDOS: Taming Nondeterminism in Distributed
+Systems</a>
+(<strong>ASPLOS 2013</strong>), Nick Hunt, Tom Bergan, Luis Ceze, and Steve Gribble.</p>
+
+<p><a href="http://www.cs.umass.edu/~emery/wodet3/wodet3-paper3.pdf">The Case For Merging Execution- and Language-level Determinism with
+MELD</a> (<strong>WoDet
+2012</strong>), Joseph Devietti, Dan Grossman, and Luis Ceze.</p>
+
+<p><a href="http://www.cs.washington.edu/homes/tbergan/papers/wodet11-hammer.pdf">The Deterministic Execution Hammer: How Well Does it Actually Pound
+Nails?</a>
+(<strong>WoDet 2011</strong>), Tom Bergan, Joseph Devietti, Nicholas Hunt, and Luis
+Ceze.</p>
+
+<p><a href="http://www.cs.washington.edu/homes/devietti/papers/devietti.rcdc.asplos.2011.pdf">RCDC: A Relaxed-Consistency Deterministic
+Computer</a>
+(<strong>ASPLOS 2011</strong>), Joseph Devietti, Jacob Nelson, Tom Bergan, Luis Ceze,
+and Dan Grossman.</p>
+
+<p><a href="http://www.cs.washington.edu/homes/tbergan/papers/osdi10-dos.pdf">Deterministic Process Groups in
+dOS</a>
+(<strong>OSDI 2010</strong>), Tom Bergan, Nick Hunt, Luis Ceze, and Steve Gribble.</p>
+
+<p><a href="http://www.cs.washington.edu/homes/tbergan/papers/asplos10-coredet.pdf">CoreDet: A Compiler and Runtime System for Deterministic Multithreaded
+Execution</a>
+(<strong>ASPLOS 2010</strong>), Tom Bergan, Owen Anderson, Joseph Devietti, Luis
+Ceze, and Dan Grossman.</p>
+
+<p><a href="http://www.cs.washington.edu/homes/luisceze/publications/asplos004-devietti.pdf">DMP:Deterministic Shared Memory
+Multiprocessing</a>
+(<strong>ASPLOS 2009</strong>), Joseph Devietti, Brandon Lucia, Luis Ceze, and Mark
+Oskin. (Selected for <em>IEEE Micro Top Picks</em>. An earlier version appeared
+in SHCMP’08 held with ISCA’08).</p>
+
+<h3 id="dosddos-source-code">dOS+DDOS Source Code</h3>
+
+<p>The source code for dOS (OSDI 2010) and DDOS (ASPLOS 2013) is <a href="http://www.cs.washington.edu/homes/tbergan/code/ddos-src.tar.gz">available
+here</a>.
+The source is not currently maintained.</p>
+
+<h3 id="rcdc-simulator-source-code-and-data">RCDC Simulator Source Code and Data</h3>
+
+<p>The source code for the RCDC simulator is <a href="http://www.cs.washington.edu/homes/devietti/code/rcdcsim-v1.tar.gz">available
+here</a>.
+A README describing how to use the code, and its overall design, is
+<a href="http://linuxforlovers.wordpress.com/2011/01/27/rcdc-simulator-release-notes/">here</a>.</p>
+
+<p>We have also posted
+<a href="http://public.tableausoftware.com/views/RCDCARelaxedConsistencyDeterministicComputer/Fig7OverallPerformance&gt;?:embed=yes&amp;:toolbar=yes&amp;:tabs=yes">interactive versions of the graphs</a> from the paper.</p>
+
+<h3 id="coredet-source-code">CoreDet Source Code</h3>
+
+<p>Our lawyers want you follow this link to download the CoreDet source
+code:
+<a href="http://depts.washington.edu/uwc4c/express-licenses/assets/coredet/">link</a>.
+Source code is available for the original CoreDet paper (ASPLOS 2010),
+as well as the updated version of CoreDet used in the RCDC paper (ASPLOS
+2011).</p>
+
+</div>
+
+
+          <div class="footer">
+
+          </div>
+
+        </div> <!-- /container -->
+
+        <!-- Support retina images. -->
+        <script type="text/javascript"
+            src="/js/srcset-polyfill.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tiago's Master Thesis Proposals: Research Projects</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/sampa.css" rel="stylesheet">
+        <link rel="alternate" type="application/atom+xml" title="Atom"
+            href="/blog/blog.xml">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>      
+        <div class="container">
+          <div id="pageHeader" class="homeColor">
+            <a href="/">
+                <img id ="photo" src="/img/tjvg.jpg"
+                    alt="Tiago Guerreiro" class="homeColor">
+            </a>
+
+            <div id="title">Tiago Guerreiro
+            </div>
+
+            <div id="nav">
+                  
+                  
+            </div>
+
+            
+          </div>  
+          
+          <div id="social_bar">
+    <a href="https://twitter.com/tjvguerreiro"><i style="color: #00aced;" class="fa fa-twitter-square fa-2x"></i></a>
+    <a href="https://www.linkedin.com/profile/view?id=1602325"><i style="color: #007bb6;" class="fa fa-linkedin-square fa-2x"></i></a>
+</div>
+
+
+          
+
+  <h2>Research Projects</h2>
+
+          
+<div class="content">
+<p>Our research crosses multiple layers of the system stack, from hardware to programming languages and applications.  Our research has four main themes. The <em>concurrency</em> theme addresses challenges in writing, testing and debugging concurrent programs. The <em>approximate computing</em> theme explores accuracy trade-offs across the system stack for better energy efficiency and performance. The <em>emerging applications</em> theme focuses on building systems to better support new applications, from  mobile apps to graph analytics. The <em>emerging technologies</em> theme aims at taking advantage of new storage and compute technologies in building new systems.</p>
+
+<h3 id="concurrency">Concurrency</h3>
+
+<p>Concurrency is present in pretty much every computer system, from sensor nodes to supercomputers to distributed applications. With ubiquitous multicores, it is actually necessary to write concurrent code to take advantage of parallelism. However, concurrent software is notoriously difficult to write, test and debug.</p>
+
+<p>Our concurrency research explores: <a href="osha.html">new programming models</a> that make interaction between threads explicit and disciplined; new execution models that remove unnecessary non-determinism from parallel execution (<a href="dmp.html">Deterministic multiprocessing (DMP)</a>); new techniques for <a href="concurrencybugs.html">debugging and even automatically avoiding concurrency bugs</a>; and new language and hardware techniques that <a href="concurrencyexceptions.html">turn concurrency bugs into exceptions</a> much like segmentation fault or division by zero.</p>
+
+<h3 id="approximate-computing">Approximate Computing</h3>
+
+<p><img src="/img/noisy.png" class="illustration" style="width: 300px; height: 208px;" /></p>
+
+<p>Improving energy efficiency is paramount in mobile devices and online service
+infrastructures. Even more importantly, as we approach the limits of silicon
+device scaling, it might be an enabler for future systems performance
+and features. Many important applications such as computer vision, machine learning, signal
+processing, web search, augmented reality, big data analytics, and many more,
+can inherently tolerate inaccurate computation at various levels. With <a href="approximation/enerj.html">approximate computing</a>, this fact can be exploited for fundamentally more
+efficient computing systems.</p>
+
+<p>The key idea in approximate computing is to trade off accuracy in computation,
+storage, and communication for better performance and energy efficiency. It enables effective use of more aggressive
+transistor technology, analog computing techniques in a more general way, and new optimizations or code
+transformations (e.g., using fundamentally
+approximate models of execution like <a href="approximation/npu.html">neural networks</a>).</p>
+
+<p>Taking advantage of approximate computing, though, requires overcoming many
+technical challenges. Programmers need a reasonable model to write code for
+and they need tools for testing and debugging approximate programs. The system
+needs to offer meaningful guarantees of output quality otherwise unusable
+output actually leads to energy waste. Our research aims to develop a comprehensive solution across the entire system
+stack, including: language and runtime techniques to
+express and enforce quality metrics where inaccuracy can be tolerated (<a href="approximation/enerj.html">EnerJ</a>); language tools, including
+approximation recommenders and debuggers;  compilers to communicate the
+information to the hardware; microarchitectures and hardware techniques
+for approximate execution (<a href="approximation/npu.html">NPU</a>, <a href="approximation/snnap.html">SNNAP</a>); approximate <a href="http://homes.cs.washington.edu/~asampson/media/papers/approxstorage-micro2013.pdf">data storage</a> and communication
+services; and abstractions for approximate hardware design.</p>
+
+<h3 id="emerging-applications">Emerging Applications</h3>
+
+<p>Applications are often a major driver of progress in computer systems architecture. We are currently interested in two emerging application directions: the big and the small. The big is large-scale data analysis, which often involves forms of parallelism not very well supported by typical data-parallel systems. The small is mobile applications, which have stringent power requirements, but are often written in high-level languages that are difficult to optimized.</p>
+
+<p>Our effort on “big” applications currently focuses on support large scale irregular applications, which don’t have much locality and exhibits irregular forms of parallelism. A classic example is graph analysis of social network data. We developing a system called <a href="grappa.html">Grappa</a>, which aims at making it very simple to write large scale irregular applications with near optimal system utilization. The key lower-level research question is on how to exploit latency tolerance with concurrency in large systems.</p>
+
+<p>Grappa is being used to enable fast, in-memory computation of complex data analytics pipelines from domains like bibliometrics. To use Grappa without writing low-level code, we have built a compiler called <a href="https://github.com/uwescience/raco#c-and-grappa-output-radish">Radish</a> that translates SQL and other high-level languages to efficient distributed memory programs.</p>
+
+<p>Our effort on “small” applications focuses on better supporting scripting languages and web browsing in mobile devices. We are exploring [hardware support for scripting languages] (mobileweb.html) and ways to enable new optimizations in mobile browsers by <a href="webchar.html">characterizing</a> sources of inefficiencies.</p>
+
+<h3 id="emerging-technologies">Emerging Technologies</h3>
+
+<p>The other main driver of new systems is the advent of new basic technologies. One such technology we are interested in is fast non-volatile memories (NVRAM). We believe that the implications of NVRAM on software are significant
+and game-changing. For example, the existence of a two-level storage
+system consisting of fast volatile main memory and slow non-volatile
+storage (e.g., disk) has been fundamental to virtually all software
+systems for the entire history of computing.  The potential of
+computer systems consisting of a large, fast, single-level,
+non-volatile memory system provides a crucial opportunity to
+re-imagine the structure of software in the future. Hence, we are exploring <a href="nonvolatile.html">system implications of nonvolatile memories</a>.</p>
+
+<p>Another exciting “emerging” technology is engineered DNA molecules. 
+Performing computation inside living cells offers life-changing applications, from improved medical diagnostics to better cancer therapy to intelligent drugs. Due to its bio-compatibility and ease of engineering, one promising approach for performing in-vivo computation is DNA strand displacement. 
+DNA nanotechnology is currently at a turning point, with many proposed applications being realized. We believe that it is time for the computer architecture community to take notice and contribute. We explore architectural issues in such systems, such as modularity, composability, reliability, etc.</p>
+
+</div>
+
+
+          <div class="footer">
+
+          </div>
+
+        </div> <!-- /container -->
+
+        <!-- Support retina images. -->
+        <script type="text/javascript"
+            src="/js/srcset-polyfill.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>
