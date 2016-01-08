@@ -4,6 +4,9 @@ body {
   padding-bottom: 20px;
   font-size: 14px;
   font-weight: 400;
+  font-family: "Helvetica Neue", Helvetica, Calibri, Verdana, "Sans Serif"; }
+
+#title, h1, h2, h3, h4 {
   font-family: "Open Sans", Helvetica, Calibri, Verdana, "Sans Serif"; }
 
 a {
@@ -87,7 +90,8 @@ ul.people {
 ul.project-people {
   display: inline;
   list-style-type: none;
-  padding-left: 0em; }
+  padding-left: 0em;
+  margin-bottom: 1rem; }
   ul.project-people li {
     display: inline; }
     ul.project-people li a.person {
